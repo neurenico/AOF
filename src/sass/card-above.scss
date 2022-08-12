@@ -1,0 +1,83 @@
+@import 'common.scss';
+
+.card-above {
+    padding: 1em 0;
+    text-align: center;
+
+    .card-above__title {
+        @include font-title;
+        margin: 40px 0;
+        transition: .3s;
+
+        @media screen and (max-width: 540px) {
+            font-size: 30px;
+            margin: 30px 32px;
+        }
+    }
+
+    .card-above__wrapper {
+        max-width: 2000px;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        margin: 1em auto;
+        grid-gap: 2em;
+        padding: 0 2em;
+
+        @media screen and (max-width: 840px) {
+            grid-gap: 1em;
+            grid-template-columns: 1fr;
+        }
+
+        .card-above__item {
+
+            .card-above__link {
+                text-decoration: none;
+
+                &:hover > p {
+                    @include reference;  
+                }
+
+                &:hover > .card-above__img-wrapper::before {
+                    opacity: 0.2;
+                }
+
+                .card-above__img-wrapper {
+                    position: relative;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    
+                    .card-above__img {
+                        width: 100%;
+                    }
+                }
+
+                .card-above__img-wrapper::before {
+                    content: '';
+                    width: 100%;
+                    height: 100%;
+                    position: absolute;
+                    z-index: 1;
+                    background: rgb(0, 0, 0, 0.5);
+                    opacity: 0;
+                    transition: .3s;
+                }
+
+                > p {
+                    @include font-description;
+                    margin: 0.725em 0;
+                    transition: .3s;
+
+                    @media screen and (max-width: 840px) {
+                        margin: 12px 0;
+                    }
+
+                    @media screen and (max-width: 540px) {
+                        font-size: 12px;
+                        margin: 12px 0;
+                    }
+                }
+            }
+        }
+    }
+}

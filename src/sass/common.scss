@@ -1,0 +1,109 @@
+@import "../../fonts/cormorantgaramond.css";
+
+@font-face {
+    font-family: 'Proxima-Nova';
+    src: url(../../fonts/Proxima\ Nova\ Font.otf);
+}
+
+
+//     -----                             -----        //
+
+//                      -   -                         //
+
+//<-------------------------------------------------->//
+
+
+//colors
+$white: #ffffff;
+$black: #000000;
+$gold: #d6954b;
+$lgray: #fbfbfb;
+$gray: #f4f4f4;
+$dgray: #4a4a4a;
+$mdgray: #dbdbdb;
+$danger: red;
+$warn: yellow;
+$success: green;
+$info: blue;
+
+//fonts
+$serif: 'Cormorant Garamond', serif;
+$sans-serif: 'Proxima-Nova', sans-serif;
+
+//font-weigth
+$fw-light: 300;
+$fw-regular: 400;
+$fw-medium: 600;
+
+//font-size
+$fz-descriprion: .725rem;
+$fz-title-main: 3rem;
+$fz-title: 2.5rem;
+$fz-text: 0.88rem;
+
+
+//<-------------------------------------------------->//
+
+
+@mixin font-default {
+    font-family: $sans-serif;
+    font-size: $fz-text;
+    font-weight: $fw-regular;
+    color: $dgray;
+    line-height: 1.65em;
+    text-decoration: none;
+}
+
+@mixin font-title {
+    font-family: $serif;
+    font-size: $fz-title;
+    font-weight: $fw-light;
+    color: $dgray;
+    line-height: 1.2em;
+}
+
+@mixin font-description {
+    font-family: $sans-serif;
+    font-size: $fz-descriprion;
+    font-weight: $fw-regular;
+    color: $dgray;
+    line-height: 1.65em;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+@mixin font-text {
+    font-family: $sans-serif;
+    font-size: $fz-text;
+    font-weight: $fw-regular;
+    color: $dgray;
+    line-height: 1.65em;
+}
+
+@mixin reference {
+    color: $gold;
+}
+
+@mixin ref-button {
+    background-color: $white;
+}
+
+@mixin button {
+    border: 1px solid $gold;
+    width: fit-content;
+    text-align: center;
+    padding: 1.3em 2em;
+    transition: .2s ease;
+    background: transparent;
+}
+
+
+//<-------------------------------------------------->//
+
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+
