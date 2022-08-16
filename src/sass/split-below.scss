@@ -1,0 +1,76 @@
+@import "common.scss";
+
+.split-below__container {
+    background-color: rgb(205, 215, 217);
+    width: 100%;
+
+    .split-below {
+        display: grid;
+        grid-gap: 1em;
+        grid-template-columns: 1fr 1fr;
+        width: 100%;
+        margin: 1em auto;
+
+        @media screen and (max-width: 1040px) {
+            grid-template-columns: 1fr;
+        }
+
+        .split-below__img-container {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            .split-below__img {
+                width: 100%;
+                object-fit: cover;
+            }
+        }
+
+        .split-below__main {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 3em 5em 4em 120px;
+
+            @media screen and (max-width: 1040px) {
+                padding: 48px 48px 70px;
+            }
+
+            .split-below__content {
+                text-align: center;
+                display: flex;
+                flex-flow: column;
+                align-items: center;
+            justify-content: center;
+
+                .split-below__title {
+                    @include font-title;
+                    margin: 40px 0;
+
+                    @media screen and (max-width: 540px) {
+                        font-size: 30px;
+                        margin: 30px 0;
+                    }
+                }
+
+                .split-below__link {
+                    @include button;
+                    @include font-description;
+                    text-decoration: none;
+                    @media screen and (max-width: 540px) {
+                        font-size: 12px;
+                        margin: 12px 0;
+                    }
+
+                    &:hover {
+                        @include reference;
+                        @include ref-button;
+                    }
+                }
+            }
+        }
+
+
+    }
+}

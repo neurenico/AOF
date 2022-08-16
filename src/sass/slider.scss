@@ -2,18 +2,21 @@
 
 .swiper-first {
     padding: 0;
-    z-index: -1;
+    z-index: 1;
     position: relative;
+    overflow: hidden;
 
-    .swiper-wrapper {
+    .swiper-wrapper-first {
         margin-top: 100px;
         width: 100%;
         height: 80vh;
+        display: flex;
 
-        .swiper-slide {
+        .swiper-slide-first {
             width: 100%;
             height: 100%;
             position: relative;
+            flex-shrink: 0;
 
             .swiper-img {
                 width: 100%;
@@ -35,6 +38,8 @@
                 max-width: 32vw;
                 text-align: left;
                 transition: .3s;
+                display: flex;
+                flex-flow: column;
 
                 @media screen and (max-width: 840px) {
                     left: 50%;
@@ -43,6 +48,8 @@
                     text-align: center;
                     max-width: none;
                     width: 90%;
+                    align-items: center;
+                    justify-content: center;
                 }
 
                 .swiper__heading {
@@ -86,12 +93,12 @@
         }
     }
 
-    .swiper-btn-container {
+    .swiper-btn-container-first {
         position: absolute;
         top: calc(50% - 7.5px);
         width: 100%;
 
-        .swiper-btn-wrapper {
+        .swiper-btn-wrapper-first {
             max-width: 1224px;
             margin: 0 auto;
             display: flex;

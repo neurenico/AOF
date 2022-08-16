@@ -6,6 +6,7 @@
 }
 
 
+
 //     -----                             -----        //
 
 //                      -   -                         //
@@ -104,6 +105,10 @@ $fz-text: 0.88rem;
 * {
     box-sizing: border-box;
     margin: 0;
+}
+
+body {
+    overflow-x: hidden;
 }
 
 

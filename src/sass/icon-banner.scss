@@ -1,0 +1,103 @@
+@import "common.scss";
+
+.icon-banner__container {
+    background-color: $gray;
+    margin: 6em 0 3em;
+    transition: opacity .8s;
+
+    .icon-banner {
+        max-width: 1040px;
+        padding: 3em 1em;
+        margin: 0 auto;
+        display: flex;
+        flex-flow: column;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        text-align: center;
+
+        .icon-banner__title {
+            @include font-title;
+            font-size: 32px;
+            max-width: 430px;
+            margin: 26.65px;
+
+            @media screen and (max-width: 540px) {
+                font-size: 24px;
+                margin: 19.92px;
+            }
+        }
+
+        .icon-banner__list {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-gap: 3em;
+            padding: 0;
+            margin-bottom: 2.5em;
+
+            @media screen and (max-width: 685px) {
+                grid-template-columns: 1fr;
+            }
+
+            .icon-banner__item {
+                display: flex;
+                flex-flow: column;
+                justify-content: flex-end;
+                height: 100%;
+                align-items: center;
+
+                .icon-banner__item-img {
+                    height: auto;
+                    object-fit: contain;
+                    margin-bottom: 1em;
+                }
+
+                .icon-banner__item-text {
+                    @include font-description;
+                    font-size: 11.2px;
+
+                    @media screen and (max-width: 540px) {
+                        font-size: 12px;
+                    }
+                }
+            }
+        }
+
+        .icon-banner__link {
+            @include button;
+            @include font-description;
+            text-decoration: none;
+
+            @media screen and (max-width: 540px) {
+                font-size: 12px;
+            }
+
+            &:hover {
+                @include ref-button;
+                @include reference;
+            }
+        }
+
+        .icon-banner__img-right {
+            position: absolute;
+            right: 0;
+            top: 0;
+            transform: translate(50%,-40%);
+
+            @media screen and (max-width: 700px) {
+                display: none;
+            }
+        }
+
+        .icon-banner__img-left {
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            transform: translate(-50%,20%);
+
+            @media screen and (max-width: 700px) {
+                display: none;
+            }
+        }
+    }
+}

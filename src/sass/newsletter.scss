@@ -1,0 +1,95 @@
+@import "common.scss";
+
+.newsletter__wrapper {
+    width: 100%;
+    background-color: $gray;
+    padding: 0.25em 1em;
+
+    .newsletter {
+        max-width: 1040px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        text-align: center;
+
+        @media screen and (max-width: 1040px) {
+            flex-direction: column;
+        }
+
+        .newsletter__title {
+            @include font-description;
+            margin: 15.428px 0;
+
+            @media screen and (max-width: 540px) {
+                font-size: 10.8px;
+                margin: 14.364px 0;
+            }
+        }
+
+        .newsletter__form-container {
+            padding: 10px 5px;
+
+            .newsletter__form {
+                height: 120px;
+                width: 100%;
+                display: flex;
+                align-items: center;
+
+                .newsletter__form-input-container {
+                    display: flex;
+
+                    .newsletter__email-container {
+                        max-width: 159px;
+                        height: 50px;
+                        margin: 10px 6px;
+
+                        .newsletter__email {
+                            padding-left: 16px;
+                            height: 100%;
+                            width: 100%;
+                            text-align: left;
+                            color: rgb(0, 0, 0);
+                            font-family: $sans-serif;
+                            font-size: 13px;
+                            font-weight: $fw-regular;
+                            letter-spacing: 0px;
+                            background-color: $white;
+                            border: 1px solid $dgray;
+                        }
+                    }
+
+    
+                    .newsletter__submit {
+                        @include font-description;
+                        background: $dgray;
+                        border-radius: 0px;
+                        border-style: none;
+                        border-color: $black;
+                        border-width: 2px;
+                        color: $white;
+                        font-size: 12px;
+                        padding: 0px 10px;
+                        cursor: pointer;
+                        height: 50px;
+                        margin: 10px 6px;
+                    }
+                }
+
+            }
+        }
+
+        .newsletter__text-container {
+
+            .newsletter__text {
+                @include font-text;
+                margin: 10px 0;
+    
+                @media screen and (max-width: 540px) {
+                    font-size: 10.56px;
+                }
+            }
+        }
+
+    }
+}

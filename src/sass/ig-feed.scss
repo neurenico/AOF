@@ -1,0 +1,152 @@
+@import "common.scss";
+
+.ig-feed-container {
+    width: 100%;
+    height: 100%;
+    padding: 2em;
+
+    .ig-feed {
+        display: grid;
+        grid-template-columns: 1fr 4fr;
+        grid-gap: 2em;
+        width: 100%;
+        height: 100%;
+
+        @media screen and (max-width: 1040px) {
+            grid-template-columns: 1fr 1fr;
+            grid-gap: 1em;
+        }
+
+        @media screen and (max-width: 640px) {
+            grid-template-columns: 1fr;
+        }
+
+        .ig-feed__first {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-decoration: none;
+            text-align: center;
+            color: $black;
+            background-color: $gray;
+            width: calc(20vw - 2em);
+            height: calc(20vw - 2em);
+
+            @media screen and (max-width: 1040px) {
+                width: calc(50vw - 2em);
+                height: calc(50vw - 2em);
+            }
+
+            @media screen and (max-width: 640px) {
+                width: calc(100vw - 4em);
+                height: calc(100vw - 4em);
+            }
+
+            > p {
+                font-family: $sans-serif;
+                font-weight: $fw-regular;
+                font-size: 10px;
+                color: $dgray;
+                text-transform: none;
+                margin-bottom: 2em;
+                padding: 0 2em;
+                line-height: 1.65;
+            }
+
+            > i {
+                font-size: 50px;
+
+                @media screen and (max-width: 1040px) {
+                    font-size: 25px;
+                }
+            }
+
+            > h3 {
+                @include font-description;
+                margin: 23.2px 0 11.6px;
+
+                @media screen and (max-width: 540px) {
+                    font-size: 12px;
+                    margin: 24px 0 12px;
+                }
+            }
+        }
+
+        .insta-feed {
+            margin: 0;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-gap: 1em;
+            width: 100%;
+            height: 100%;
+
+            @media screen and (max-width: 1040px) {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .insta-feed__item {
+                width: calc(20vw - 2em);
+                height: calc(20vw - 2em);
+                position: relative;
+
+                @media screen and (max-width: 1040px) {
+                    width: calc(25vw - 1.5em);
+                    height: calc(25vw - 1.5em);
+                }
+
+                @media screen and (max-width: 640px) {
+                    width: calc(50vw - 2.5em);
+                    height: calc(50vw - 2.5em);
+                }
+
+                &:hover > .insta-feed__img-container::before{
+                    opacity: .8;
+                }
+
+                &:hover > .insta-feed__img-container > i {
+                    opacity: .8;
+                    display: block;
+                }
+
+                .insta-feed__img-container {
+                    width: 100%;
+                    height: 100%;
+                    position: relative;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+
+                    > i {
+                        position: absolute;
+                        z-index: 2;
+                        color: $white;
+                        font-size: 20px;
+                        display: none;
+                    }
+
+                    .insta-feed__img {
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                    }
+                }
+
+                .insta-feed__img-container::before {
+                    content: '';
+                    width: 100%;
+                    height: 100%;
+                    position: absolute;
+                    z-index: 1;
+                    background: rgb(0, 0, 0, 0.5);
+                    opacity: 0;
+                    transition: .3s;
+                }
+            }
+
+            .insta-feed__item:hover > .insta-feed__item::before {
+                opacity: 1;
+            }
+        }
+    }
+}

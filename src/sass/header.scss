@@ -17,6 +17,7 @@
     text-align: center;
     position: relative;
     transition: .2s ease;
+    z-index: 3;
 
     @media screen and (max-width: 540px) {
         font-size: 0.6em;
@@ -49,6 +50,7 @@
     background-color: $white;
     padding: 6.4px 38.4px;
     white-space: nowrap;
+    z-index: 3;
 
     @media screen and (max-width: 1040px) {
         padding: 12.8px;

@@ -1,0 +1,115 @@
+@import 'common.scss';
+
+.swiper-second-outside {
+    background-color: $lgray;
+    padding: 1em 0;
+    text-align: center;
+
+    .swiper-second-title {
+        @include font-title;
+        margin: 40px 0;
+    }
+
+    .slider-second-container {
+        padding: 0 2em;
+
+        .swiper-second {
+            z-index: 1;
+            position: relative;
+            overflow: hidden;
+            margin: 1em auto;
+            padding: 0 10px;
+            max-width: 1300px;
+        
+            .swiper-wrapper-second {
+                margin: 1em auto;
+                display: flex;
+        
+                .swiper-slide-second {
+                    width: 100%;
+                    height: 100%;
+                    position: relative;
+                    flex-shrink: 0;
+                    padding: 0 1.5em;
+                    transition: .3s;
+    
+                    .swiper-slide-second__link {
+                        width: 100%;
+                        text-decoration: none;
+    
+                        &:hover > p {
+                            @include reference;  
+                        }
+        
+                        &:hover > .swiper-slide-second__img-wrapper::before {
+                            opacity: 0.2;
+                        }
+    
+                        .swiper-slide-second__img-wrapper {
+                            position: relative;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+    
+                            .swiper-slide-second__img {
+                                width: 100%;
+                                height: 100%;
+                                object-fit: cover;
+                            }
+                        }
+    
+                        .swiper-slide-second__img-wrapper::before {
+                            content: '';
+                            width: 100%;
+                            height: 100%;
+                            position: absolute;
+                            z-index: 1;
+                            background: rgb(0, 0, 0, 0.5);
+                            opacity: 0;
+                            transition: .3s;
+                        }
+    
+                        .swiper-slide-second__description {
+                            @include font-description;
+                            margin: 11.6px 0;
+                        }
+                    }
+                }
+            }
+    
+            .swiper-button-prev-second {
+                position: absolute;
+                left: 4px;
+                top: calc(50% - 7.5px);
+                z-index: 4;
+                cursor: pointer;
+                padding: 9px 11px;
+        
+                > i {
+                    font-size: 15px;
+                }
+        
+                &:focus {
+                    border: 1px solid rgb(114, 152, 181);
+                }
+            }
+    
+            .swiper-button-next-second {
+                position: absolute;
+                right: 4px;
+                top: calc(50% - 7.5px);
+                z-index: 4;
+                cursor: pointer;
+                padding: 9px 11px;
+                
+                > i {
+                    font-size: 15px;
+                }
+        
+                &:focus {
+                    border: 1px solid rgb(114, 152, 181);
+                }
+            }
+        }
+    }
+}

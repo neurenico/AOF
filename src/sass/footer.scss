@@ -1,0 +1,215 @@
+@import "common.scss";
+
+
+.footer-wrapper {
+    padding: 2em;
+
+    .footer {
+        display: flex;
+        flex-flow: row wrap;
+        max-width: 1140px;
+        margin: 0 auto;
+        justify-content: space-between;
+
+        @media screen and (max-width: 840px) {
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .footer-left {
+
+            @media screen and (max-width: 840px) {
+                order: 3;
+            }
+            
+            .footer-left__nav {
+                display: grid;
+                grid-template-columns: repeat(4, auto);
+                grid-column-gap: 2em;
+                grid-row-gap: 1em;
+                line-height: 2.2;
+
+                @media screen and (max-width: 1040px) {
+                    grid-template-columns: repeat(2, auto);
+                }
+
+                @media screen and (max-width: 840px) {
+                    border-top: 1px solid $gray;
+                    border-bottom: 1px solid $gray;
+                }
+
+                .footer-left__column {
+                    text-align: left;
+
+                    .footer-left__title {
+                        @include font-description;
+                        margin: 15.428px 0;
+                    }
+
+                    .footer-left__list {
+                        list-style: none;
+                        padding: 0;
+
+                        .footer-left__item {
+
+                            @media screen and (max-width: 540px) {
+                                line-height: 22px;
+                            }
+
+                            > a {
+                                @include font-text;
+                                text-decoration: none;
+                                transition: .3s;
+
+                                @media screen and (max-width: 540px) {
+                                    font-size: 10.56px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .footer-center {
+
+            @media screen and (max-width: 840px) {
+                order: 1;
+            }
+
+            .footer-center-wrapper {
+                text-align: left;
+
+                @media screen and (max-width: 840px) {
+                    margin-bottom: 20px;
+                }
+
+                .footer-center__title {
+                    @include font-description;
+                    margin: 15.428px 0;
+
+                    @media screen and (max-width: 540px) {
+                        font-size: 10.56px;
+                        margin: 14.04px 0;
+                    }
+                }
+
+                .footer-center__container {
+                    display: flex;
+                    flex-direction: column;
+
+                    @media screen and (max-width: 840px) {
+                        align-items: center;
+                    }
+
+                    .footer-center__link {
+                        
+                        .footer-center__img {
+                            max-width: 120px;
+                            width: 100%;
+                            height: auto;
+                        }
+
+                        #app-store {
+                            max-width: 106px;
+                            margin: 0 6px;
+                        }
+                    }
+                }
+            }
+        }
+
+        .footer-right {
+            max-width: 300px;
+
+            @media screen and (max-width: 840px) {
+                order: 2;
+            }
+
+            .footer-right-wrapper {
+
+                .footer-right__title {
+                    @include font-description;
+                    margin: 15.428px 0;
+
+                    @media screen and (max-width: 840px) {
+                        text-align: center;
+                    }
+
+                    @media screen and (max-width: 540px) {
+                        font-size: 10.56px;
+                        margin: 14.04px 0;
+                    }
+                }
+
+                p {
+                    @include font-text;
+
+                    @media screen and (max-width: 840px) {
+                        text-align: center;
+                    }
+
+                    @media screen and (max-width: 540px) {
+                        font-size: 10.56px;
+                        margin: 10.56px 0;
+                    }
+                }
+
+                a {
+                    text-decoration: none;
+                    color: $dgray;
+                    transition: .3s;
+
+                    &:hover {
+                        @include reference;
+                    }
+                }
+
+                > .footer-right__text {
+                    margin: 14.08px 0;
+                }
+
+                .footer-right-social {
+                    margin: 14.08px 0;
+                    padding: 0;
+
+                    .footer-right-social__link {
+                        margin-right: 1.5em;
+
+                        > i {
+                            font-size: 24px;
+                            color: $black;
+                            transition: .3s;
+
+                            &:hover {
+                                @include reference;
+                            }
+                        }
+                    }
+                }
+
+                .footer-right-legal {
+                    margin-top: 28.6px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    text-align: center;
+
+                    > p {
+                        margin: 14.08px 0;
+
+                        @media screen and (max-width: 540px) {
+                            font-size: 12px;
+                            margin: 12px 0;
+                        }
+                    }
+
+                    .footer-right-legal__logo {
+                        height: 42px;
+                        margin-left: 28.16px;
+                    }
+                }
+            }
+        }
+    }
+}
