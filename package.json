@@ -1,7 +1,6 @@
 {
   "name": "aot",
   "version": "1.0.0",
-  "description": "",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "parcel src/index.html --open",
@@ -9,11 +8,18 @@
   },
   "author": "",
   "license": "ISC",
-  "dependencies": {
-    "parcel": "^2.7.0",
-    "sass": "^1.54.3"
-  },
   "devDependencies": {
-    "@parcel/transformer-sass": "^2.7.0"
-  }
+    "@parcel/transformer-sass": "^2.7.0",
+    "parcel": "^2.7.0",
+    "sass": "^1.54.5"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/neurenico/AOF.git"
+  },
+  "bugs": {
+    "url": "https://github.com/neurenico/AOF/issues"
+  },
+  "homepage": "https://github.com/neurenico/AOF#readme",
+  "description": ""
 }

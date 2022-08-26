@@ -1,5 +1,7 @@
 @import "../../fonts/cormorantgaramond.css";
 
+@import url('https://fonts.googleapis.com/css2?family=DynaPuff:wght@400;600&family=Silkscreen&display=swap');
+
 @font-face {
     font-family: 'Proxima-Nova';
     src: url(../../fonts/Proxima\ Nova\ Font.otf);
@@ -30,6 +32,8 @@ $info: blue;
 //fonts
 $serif: 'Cormorant Garamond', serif;
 $sans-serif: 'Proxima-Nova', sans-serif;
+$puff: 'DynaPuff', cursive;
+$robotic: 'Silkscreen', cursive;
 
 //font-weigth
 $fw-light: 300;
@@ -47,7 +51,7 @@ $fz-text: 0.88rem;
 
 
 @mixin font-default {
-    font-family: $sans-serif;
+    font-family: $puff;
     font-size: $fz-text;
     font-weight: $fw-regular;
     color: $dgray;
@@ -56,7 +60,7 @@ $fz-text: 0.88rem;
 }
 
 @mixin font-title {
-    font-family: $serif;
+    font-family: $robotic;
     font-size: $fz-title;
     font-weight: $fw-light;
     color: $dgray;
@@ -64,7 +68,7 @@ $fz-text: 0.88rem;
 }
 
 @mixin font-description {
-    font-family: $sans-serif;
+    font-family: $puff;
     font-size: $fz-descriprion;
     font-weight: $fw-regular;
     color: $dgray;
@@ -74,7 +78,7 @@ $fz-text: 0.88rem;
 }
 
 @mixin font-text {
-    font-family: $sans-serif;
+    font-family: $puff;
     font-size: $fz-text;
     font-weight: $fw-regular;
     color: $dgray;
@@ -82,11 +86,11 @@ $fz-text: 0.88rem;
 }
 
 @mixin reference {
-    color: $gold;
+    color: $danger;
 }
 
 @mixin ref-button {
-    background-color: $white;
+    background-color: $warn;
 }
 
 @mixin button {
@@ -109,6 +113,7 @@ $fz-text: 0.88rem;
 
 body {
     overflow-x: hidden;
+    background-color: $warn;
 }
 
 
